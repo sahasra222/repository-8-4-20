@@ -1,0 +1,114 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id=";nM9TVj^(#)Vl-RdEOfx">sum</variable>
+    <variable id="_;iuF]VtWapTS~h530/^">x</variable>
+    <variable id="+`DNRDW(eP3#ZAZ`f!}x">average</variable>
+  </variables>
+  <block type="variables_set" id="W!EhJv/0~hFK*Y+h26L?" x="71" y="-119">
+    <field name="VAR" id=";nM9TVj^(#)Vl-RdEOfx">sum</field>
+    <value name="VALUE">
+      <block type="math_number" id="oDKdD2l0l_4fIe5~tZLg">
+        <field name="NUM">0</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="X6Lp.;1n@e)fvm%6$PFQ">
+        <field name="VAR" id="_;iuF]VtWapTS~h530/^">x</field>
+        <value name="VALUE">
+          <block type="math_number" id="mwtcM!+(XmA?)bmmIl^k">
+            <field name="NUM">0</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="A7BDBmB=5Y53@CKrkVgm">
+            <field name="VAR" id="+`DNRDW(eP3#ZAZ`f!}x">average</field>
+            <value name="VALUE">
+              <block type="math_number" id="MwygEl93.b!PFTMn?GF:">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_whileUntil" id="~MoCN|xRI+,`vH_G_*_u">
+                <field name="MODE">WHILE</field>
+                <value name="BOOL">
+                  <block type="logic_compare" id="7eNdu4LBjMgtM{7`Scb^">
+                    <field name="OP">LT</field>
+                    <value name="A">
+                      <block type="variables_get" id="2yR);MJ0FYJOO/1cq^K{">
+                        <field name="VAR" id="_;iuF]VtWapTS~h530/^">x</field>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="dGj#*6BU{kTF6;U!Sx5)">
+                        <field name="NUM">10</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="math_change" id="!x/P,a]_QK13PS:xy6Dr">
+                    <field name="VAR" id="_;iuF]VtWapTS~h530/^">x</field>
+                    <value name="DELTA">
+                      <shadow type="math_number" id="d!x{_iOAFF`b%dzLj.xs">
+                        <field name="NUM">1</field>
+                      </shadow>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="][5EKws7is6c.MIv^[{8">
+                        <field name="VAR" id=";nM9TVj^(#)Vl-RdEOfx">sum</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="D.+8aWFqLK5P4%*?GUv3">
+                            <field name="OP">ADD</field>
+                            <value name="A">
+                              <block type="variables_get" id=".yx:n-7B[)x@.t34Q?pu">
+                                <field name="VAR" id=";nM9TVj^(#)Vl-RdEOfx">sum</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <block type="variables_get" id="g7`+f[h,uR8`?k5fl-x,">
+                                <field name="VAR" id="_;iuF]VtWapTS~h530/^">x</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+                <next>
+                  <block type="variables_set" id="y(U97=3ffxQAz:op2DEO">
+                    <field name="VAR" id="+`DNRDW(eP3#ZAZ`f!}x">average</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id="x3X|ckzra^mq[(%QyW@7">
+                        <field name="OP">DIVIDE</field>
+                        <value name="A">
+                          <block type="variables_get" id="rciq=VM:PG}|R8(g1UMt">
+                            <field name="VAR" id=";nM9TVj^(#)Vl-RdEOfx">sum</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="`~=#_HM*=bkKTPFIM[+;">
+                            <field name="VAR" id="_;iuF]VtWapTS~h530/^">x</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="text_print" id="4/gXC]Z9ifu17K0?uS:k">
+                        <value name="TEXT">
+                          <block type="variables_get" id="Hv:5F$$@I^SJuNTC_nXv">
+                            <field name="VAR" id="+`DNRDW(eP3#ZAZ`f!}x">average</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
