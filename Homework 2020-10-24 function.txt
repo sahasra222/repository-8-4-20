@@ -1,0 +1,74 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="*3x+n,}NXx9h$i(GTda2">value</variable>
+    <variable id="/yiX3xx6I20IRuhV.|*J">input</variable>
+    <variable id="wLMlID*Qv2HMf2Pab3|E">square</variable>
+    <variable id="ei$+5@3Qm*$nSG]nI#UH">result</variable>
+  </variables>
+  <block type="procedures_defreturn" id="@nMPU.DCsuC+a)NSh-(]" x="56" y="-233">
+    <mutation>
+      <arg name="input" varid="/yiX3xx6I20IRuhV.|*J"></arg>
+    </mutation>
+    <field name="NAME">computesquare</field>
+    <comment pinned="false" h="80" w="160">Describe this function...</comment>
+    <statement name="STACK">
+      <block type="variables_set" id="V=v}K]n]+dxK[s/WQ8K.">
+        <field name="VAR" id="ei$+5@3Qm*$nSG]nI#UH">result</field>
+        <value name="VALUE">
+          <block type="math_arithmetic" id="}=h.RR={QfX0coi4vmQZ">
+            <field name="OP">MULTIPLY</field>
+            <value name="A">
+              <block type="variables_get" id="Vi}ZZb3uK?fe|1g9SCOD">
+                <field name="VAR" id="/yiX3xx6I20IRuhV.|*J">input</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="variables_get" id="TJ)gg2nB.UrF4eJ-H8,u">
+                <field name="VAR" id="/yiX3xx6I20IRuhV.|*J">input</field>
+              </block>
+            </value>
+          </block>
+        </value>
+      </block>
+    </statement>
+    <value name="RETURN">
+      <block type="variables_get" id="ip:iCt^H^GqbP)k]JYr#">
+        <field name="VAR" id="ei$+5@3Qm*$nSG]nI#UH">result</field>
+      </block>
+    </value>
+  </block>
+  <block type="variables_set" id=":50[[mUAm(5,{qRN0T+I" x="51" y="-93">
+    <field name="VAR" id="*3x+n,}NXx9h$i(GTda2">value</field>
+    <value name="VALUE">
+      <block type="math_number" id="-lfUK]-N|C^wW?r[EXHQ">
+        <field name="NUM">20</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="6mFdMkwnOq;HN?@4]GVx">
+        <field name="VAR" id="wLMlID*Qv2HMf2Pab3|E">square</field>
+        <value name="VALUE">
+          <block type="procedures_callreturn" id="i3X)UY,*++XZB696*%C*">
+            <mutation name="computesquare">
+              <arg name="input"></arg>
+            </mutation>
+            <value name="ARG0">
+              <block type="variables_get" id="^!Iss6)$%(`(j9Xvtqai">
+                <field name="VAR" id="*3x+n,}NXx9h$i(GTda2">value</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <next>
+          <block type="text_print" id="Y]:,OcJ%w$RdYTf5hL%_">
+            <value name="TEXT">
+              <block type="variables_get" id="$+{~F3fb/gYie#7hcjBo">
+                <field name="VAR" id="wLMlID*Qv2HMf2Pab3|E">square</field>
+              </block>
+            </value>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
