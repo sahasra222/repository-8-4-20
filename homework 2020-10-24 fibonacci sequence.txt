@@ -1,0 +1,93 @@
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="z_Zh4wL?F#M%9tyB_m$@">fib</variable>
+    <variable id="pt)qobAZVh!I,yC9E-MX">prevfib</variable>
+    <variable id="ii|kK7*#.UwtOra0{y*{">prevprevfib</variable>
+  </variables>
+  <block type="variables_set" id=";Jo9_69Zjq(7CMlCM$X^" x="-71" y="-199">
+    <field name="VAR" id="z_Zh4wL?F#M%9tyB_m$@">fib</field>
+    <value name="VALUE">
+      <block type="math_number" id=");ot(M7AatO=GcBdjQTF">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="variables_set" id="{5m6`%AToCv(r4Kw}w%0">
+        <field name="VAR" id="pt)qobAZVh!I,yC9E-MX">prevfib</field>
+        <value name="VALUE">
+          <block type="math_number" id="I~Wl=r/$:sf,WR|[v645">
+            <field name="NUM">1</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="RoV4Jzd+7JAtP,JMR#ci">
+            <field name="VAR" id="ii|kK7*#.UwtOra0{y*{">prevprevfib</field>
+            <value name="VALUE">
+              <block type="math_number" id="Z[/LO*0ftO`!/,w@zn`w">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_repeat_ext" id="l*RukyuY%n?FM1pdB(1c">
+                <value name="TIMES">
+                  <block type="math_number" id="F3v:cF[C/PJdXYHh3z9o">
+                    <field name="NUM">10</field>
+                  </block>
+                </value>
+                <statement name="DO">
+                  <block type="variables_set" id="MI_yZ{OE3N2fd)Y=Zfr`">
+                    <field name="VAR" id="z_Zh4wL?F#M%9tyB_m$@">fib</field>
+                    <value name="VALUE">
+                      <block type="math_arithmetic" id=")7N){dikgP`~pOxa+)w,">
+                        <field name="OP">ADD</field>
+                        <value name="A">
+                          <block type="variables_get" id="`~nCxOWj-%irLl|`84,G">
+                            <field name="VAR" id="pt)qobAZVh!I,yC9E-MX">prevfib</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id=";jnfzU5d?(0}l3V|:7v~">
+                            <field name="VAR" id="ii|kK7*#.UwtOra0{y*{">prevprevfib</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="_D5:FD(To!?weF%i6on0">
+                        <field name="VAR" id="ii|kK7*#.UwtOra0{y*{">prevprevfib</field>
+                        <value name="VALUE">
+                          <block type="variables_get" id="]!riz2|}-Cg|6J7|z1y?">
+                            <field name="VAR" id="pt)qobAZVh!I,yC9E-MX">prevfib</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="variables_set" id="il$HHGK70E`){W#]N6kg">
+                            <field name="VAR" id="pt)qobAZVh!I,yC9E-MX">prevfib</field>
+                            <value name="VALUE">
+                              <block type="variables_get" id="^iwIyd3AeO.eIjY60/i4">
+                                <field name="VAR" id="z_Zh4wL?F#M%9tyB_m$@">fib</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="text_print" id="JYQl8C-F[+:FtfJ?6haJ">
+                                <value name="TEXT">
+                                  <block type="variables_get" id="=qP#dRtx+z/Aum1`s}j2">
+                                    <field name="VAR" id="z_Zh4wL?F#M%9tyB_m$@">fib</field>
+                                  </block>
+                                </value>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
